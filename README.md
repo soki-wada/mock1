@@ -11,35 +11,46 @@
     1. docker-compose exec php bash
     2. composer install
     3. cp .env.example .env
-    4. https://dashboard.stripe.com/register からアカウントを作成
-    5. 開発者からAPIキーを作成
-    6. .env に下記のように設定
+    4. 環境変数を
+        DB_CONNECTION=mysql
+        DB_HOST=mysql
+        DB_PORT=3306
+        DB_DATABASE=laravel_db
+        DB_USERNAME=laravel_user
+        DB_PASSWORD=laravel_pass
+        に書き換える
+
+    5. https://dashboard.stripe.com/register からアカウントを作成
+    6. 開発者からAPIキーを作成
+    7. .env に下記のように設定
         STRIPE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxx
         STRIPE_SECRET=sk_test_xxxxxxxxxxxxxxxxxxxx
         MAIL_FROM_ADDRESS=hello@example.com
 
-    4. php artisan key:generate
-    5. php artisan migrate
-    6. php artisan db:seed
-    8. docker-compose exec mysql bash
-    9. mysql -u root -p
-    10. create database mock_test;
-    7. cp .env .env.testing
-    11. APP_ENV=test
-        APP_KEY=     
-        に書き換える（KEYは空にする）
-    12. DB_DATABASE=mock_test
+    8. php artisan key:generate
+    9. php artisan migrate
+    10. php artisan db:seed
+    11. docker-compose exec mysql bash
+    12. mysql -u root -p
+    13. create database mock_test;
+    14. cp .env .env.testing
+    15. APP_ENV=test
+        APP_KEY=（空にする）
+        DB_DATABASE=mock_test
         DB_USERNAME=root
         DB_PASSWORD=root 
         に書き換える
-    13. docker-compose exec php bash
-    13. php artisan key:generate --env=testing
-    14. php artisan migrate --env=testing
-    15. php artisan dusk:install
-    16. cp .env .env.duck.local
-    17. APP_URL=http://nginx
-        DUSK_DRIVER_URL=http://selenium:4444/wd/hub
+    16. docker-compose exec php bash
+    17. php artisan key:generate --env=testing
+    18. php artisan migrate --env=testing
+    19. php artisan dusk:install
+    20. chmod -R 777 ./.*
+    21. cp .env .env.duck.local
+    22. .env.duck.local で
+        APP_URL=http://nginx
         に書き換える
+        DUSK_DRIVER_URL=http://selenium:4444/wd/hub
+        を追加する
 
 
 ## 使用技術

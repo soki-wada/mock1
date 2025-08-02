@@ -43,7 +43,7 @@ class AddressTest extends TestCase
             'address' => $this->faker->address,
             'building' => $this->faker->secondaryAddress,
             'image' => 'test.jpg',
-            'postal_code' => $this->faker->postcode
+            'postal_code' => '123-4567'
         ]);
     }
 
@@ -56,7 +56,7 @@ class AddressTest extends TestCase
         $response->assertStatus(200);
 
         $response = $this->post('/purchase/address/'. $product->id, [
-            'postal_code' => 1234567,
+            'postal_code' => '123-4567',
             'address' => '山梨県田中市中央区杉山町田辺1-5-3',
             'building' => 'コーポ吉本108号'
         ]);
@@ -65,7 +65,7 @@ class AddressTest extends TestCase
 
         $response = $this->get('/purchase/' . $product->id);
         $response->assertStatus(200);
-        $response->assertSee(1234567);
+        $response->assertSee('123-4567');
         $response->assertSee('山梨県田中市中央区杉山町田辺1-5-3');
         $response->assertSee('コーポ吉本108号');
     }
@@ -81,7 +81,7 @@ class AddressTest extends TestCase
         $response->assertStatus(200);
 
         $response = $this->post('/purchase/address/' . $product->id, [
-            'postal_code' => 1234567,
+            'postal_code' => '123-4567',
             'address' => '山梨県田中市中央区杉山町田辺1-5-3',
             'building' => 'コーポ吉本108号'
         ]);
@@ -90,7 +90,7 @@ class AddressTest extends TestCase
 
         $response = $this->get('/purchase/' . $product->id);
         $response->assertStatus(200);
-        $response->assertSee(1234567);
+        $response->assertSee('123-4567');
         $response->assertSee('山梨県田中市中央区杉山町田辺1-5-3');
         $response->assertSee('コーポ吉本108号');
 
@@ -121,7 +121,7 @@ class AddressTest extends TestCase
             'user_id' => $this->user->id,
             'product_id' => $product->id,
             'payment' => 0,
-            'postal_code' => '1234567',
+            'postal_code' => '123-4567',
             'address' => '山梨県田中市中央区杉山町田辺1-5-3',
             'building' => 'コーポ吉本108号',
         ]);
