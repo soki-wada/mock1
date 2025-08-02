@@ -47,10 +47,15 @@
     20. chmod -R 777 ./.*
     21. cp .env .env.duck.local
     22. .env.duck.local で
-        APP_URL=http://nginx
+        APP_URL=http://nginx:80
         に書き換える
         DUSK_DRIVER_URL=http://selenium:4444/wd/hub
         を追加する
+    23. php artisan config:clear
+        php artisan cache:clear
+        php artisan view:clear
+        php artisan route:clear
+
 
 
 ## 使用技術
