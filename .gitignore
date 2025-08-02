@@ -2,3 +2,6 @@ docker/mysql/data/
 .env
 .env.testing
 .env.dusk.local
+.env
+.env.testing
+.env.dusk.local
