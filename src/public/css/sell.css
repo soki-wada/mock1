@@ -1,0 +1,177 @@
+.sell-content{
+    width: 50%;
+    margin: 40px auto 10px;
+}
+
+.sell-form{
+    width: 100%;
+}
+
+.sell-form-title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.sell-form-section{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sell-form-section-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.sell-form-image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    border: 1px  dashed #5f5f5f;
+    border-radius: 4px;
+}
+
+.sell-form-image{
+    display: none;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+}
+
+.sell-form-file-image{
+    width: 165px;
+    height: 43px;
+}
+
+.sell-form-file-image-label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff5555;
+    border-radius: 10px;
+    color: #ff5555;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.sell-form-file-image-input{
+    display: none;
+}
+
+.sell-form-section-title-gray{
+    border-bottom: 1px solid #5f5f5f;
+    font-size: 30px;
+    font-weight: 700;
+    color: #5f5f5f;
+    margin-top: 40px;
+}
+
+.sell-form-category{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.sell-form-category-label{
+    min-width: 60px;
+    padding: 5px 10px;
+    border: 2px solid #ff5555;
+    border-radius: 30px;
+    color: #ff5555;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sell-form-category-input{
+    display: none;
+}
+
+.sell-form-category-input:checked + .sell-form-category-label{
+    background-color: #ff5555;
+    color: #ffffff;
+}
+
+.sell-form-select-wrapper{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.sell-form-select{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #5f5f5f;
+    color: #5f5f5f;
+    font-size: 16px;
+    font-weight: 700;
+    appearance: none;
+    padding: 8px 40px 8px 12px;
+    background-image: url('/images/Polygon.png');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-left: 30px;
+}
+
+.sell-form-select-option-first{
+    display: none;
+}
+
+.sell-form-select-option{
+    background-color: #636769;
+    color: #ffffff;
+}
+
+.sell-form-section-input-wrapper{
+    width: 100%;
+    height: 40px;
+}
+
+.sell-form-section-input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sell-form-section-textarea-wrapper{
+    width: 100%;
+    aspect-ratio: 4/ 1;
+}
+
+.sell-form-section-textarea{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sell-form-button-wrapper{
+    width: 100%;
+    height: 65px;
+    margin-top: 80px;
+}
+
+.sell-form-button{
+    width: 100%;
+    height: 100%;
+    background-color: #ff5555;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}

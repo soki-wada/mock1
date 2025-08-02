@@ -1,0 +1,128 @@
+.profile-content{
+    width: 50%;
+    margin: 40px auto 10px;
+}
+
+.profile-form{
+    width: 100%;
+}
+
+.profile-form-title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.profile-form-image-setting{
+    display: flex;
+    align-items: center;
+}
+
+.profile-form-image-wrapper{
+    width: 150px;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.profile-form-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-form-file-image{
+    width: 180px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.profile-form-file-image-label{
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff5555;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff5555;
+    cursor: pointer;
+}
+
+.profile-form-file-image-input{
+    display: none;
+}
+
+.profile-form-section{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.profile-form-section-title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 0;
+}
+
+.profile-form-input-wrapper{
+    width: 100%;
+    height: 60px;
+}
+
+.profile-form-input{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid #5f5f5f;
+    font-size: 36px;
+}
+
+.profile-form-button-wrapper{
+    width: 100%;
+    height: 65px;
+    margin-top: 80px;
+}
+
+.profile-form-button{
+    width: 100%;
+    height: 100%;
+    background-color: #ff5555;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .profile-content {
+        margin: 0 auto 10px;
+    }
+
+    .profile-form-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-form-input-wrapper {
+        height: 45px;
+    }
+
+    .profile-form-input {
+        font-size: 24px;
+    }
+
+    .profile-form-button-wrapper {
+        height: 45px;
+        margin-top: 30px;
+    }
+
+    .profile-form-button {
+        font-size: 24px;
+    }
+}

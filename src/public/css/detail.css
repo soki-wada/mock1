@@ -1,0 +1,263 @@
+.detail-content{
+    display: flex;
+    width: 80%;
+    margin: 80px auto 0;
+}
+
+.product-image-wrapper{
+    width: 50%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.product-image{
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.product-info{
+    width: 50%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.product-name{
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.product-brand{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.product-price{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.product-price-emphasis{
+    font-size: 45px;
+}
+
+.product-icons{
+    display: flex;
+    align-items: center;
+    margin: 10px 40px;
+    column-gap: 40px;
+}
+
+.product-icon{
+    text-align: center;
+}
+
+.favorite-checkbox {
+    display: none;
+}
+
+.favorite-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-image: url('/images/favorite.png');
+}
+
+.favorite-checkbox:checked+.favorite-label {
+    background-image: url('/images/favorite_checked.png');
+}
+
+.product-icon-image-wrapper{
+    width: 40px;
+    height: 40px;
+}
+
+.product-icon-image{
+    width: 100%;
+    height: 100%;
+}
+
+.product-icon-amount{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product-purchase-form {
+    width: 100%;
+}
+
+.product-purchase-button-wrapper {
+    width: 100%;
+}
+
+.product-purchase-button {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: #ff5555;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+}
+
+.product-section-title{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.product-description{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.product-attribute{
+    display: flex;
+    align-items: center;
+}
+
+.product-attribute-title{
+    width: 25%;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.product-attribute-contents{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    column-gap: 20px;
+}
+
+.product-attribute-content{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.gray{
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding: 5px 10px;
+    min-width: 60px;
+}
+
+.product-comment-title{
+    font-size: 36px;
+    font-weight: 700;
+    color: #5f5f5f;
+    margin-bottom: 0;
+}
+
+.product-comment-user{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.product-comment-user-icon-wrapper{
+    width: 70px;
+    height: 70px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.product-comment-user-icon{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.product-comment-user-name{
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.product-comment{
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.product-comment-form-wrapper{
+    width: 100%;
+}
+
+.product-comment-form-title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.product-comment-form-input{
+    width: 100%;
+    aspect-ratio: 2/1;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.product-comment-form-button-wrapper{
+    width: 100%;
+
+}
+
+.product-comment-form-button{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: #ff5555;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 850px) {
+    .detail-content {
+        width: 90%;
+        margin: 20px auto 0;
+    }
+
+    .product-image-wrapper {
+        width: 50%;
+    }
+        
+    .product-info {
+        width: 70%;
+    }
+                    
+    .product-attribute-title {
+        width: 40%;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .product-attribute-contents {
+        width: 75%;
+        column-gap: 10px;
+    }
+    
+    .product-attribute-content {
+        font-size: 18px;
+    }
+}
