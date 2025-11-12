@@ -62,4 +62,12 @@ class User extends Authenticatable implements MustVerifyEmail
     public function favorites(){
         return $this->hasMany(Favorite::class);
     }
+
+    public function chats(){
+        return $this->hasMany(Chat::class);
+    }
+
+    public function evaluations(){
+        return $this->hasMany(Evaluation::class, 'target_user_id');
+    }
 }

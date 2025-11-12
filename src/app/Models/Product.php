@@ -54,4 +54,12 @@ class Product extends Model
 
         return $query;
     }
+
+    public function chats(){
+        return $this->hasMany(Chat::class);
+    }
+
+    public function evaluations(){
+        return $this->hasMany(Evaluation::class);
+    }
 }

@@ -2,7 +2,7 @@
 
 ## 環境構築
 ### Dockerビルド
-    1. git clone git@github.com:soki-wada/pigly-check-test.git
+    1. git clone git@github.com:soki-wada/mock1.git
     2. docker-compose up -d --build
 
   ＊ MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて docker-compose.yml ファイルを編集してください。
