@@ -82,6 +82,117 @@ conditionsテーブル
 |   created_at  |   timestamp   |||||
 |   updated_at  |   timestamp   |||||
 
+productsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|condition_id|bigint|||〇|conditions(id)|
+|name|varchar(255)|||〇||
+|price|int|||〇||
+|description|varchar(255)|||〇||
+|image|varchar(255)|||〇||
+|brand|varchar(255)|||||
+|is_purchased|boolean|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+commentsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|product_id|bigint|||〇|products(id)|
+|content|varchar(255)|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+profilesテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|username|varchar(255)|||〇||
+|address|varchar(255)|||〇||
+|building|varchar(255)|||||
+|image|varchar(255)|||〇||
+|postal_code|varchar(8)|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+categoriesテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|content|varchar(255)|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+category_productテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|product_id|bigint|||〇|products(id)|
+|category_id|bigint|||〇|categories(id)|
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+purchasesテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|profiles(id)|
+|product_id|bigint||〇|〇|products(id)|
+|payment|tinyint|||〇||
+|address|varchar(255)|||〇||
+|building|varchar(255)|||||
+|postal_code|varchar(8)|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+favoritesテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|product_id|bigint||〇|〇|products(id)|
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+dealsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|sellinig_user_id|bigint|||〇|users(id)|
+|purchasing_user_id|bigint|||〇|users(id)|
+|product_id|bigint|||〇|products(id)|
+|is_deal|boolean|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+evaluationsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|target_user_id|bigint|||〇|users(id)|
+|deal_id|bigint|||〇|deals(id)|
+|rating|int|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
+
+chatsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|id|bigint|〇||〇||
+|user_id|bigint|||〇|users(id)|
+|deal_id|bigint|||〇|deals(id)|
+|product_id|bigint|||〇|products(id)|
+|message|varchar(255)|||〇||
+|image|varchar(255)|||||
+|is_read|boolean|||〇||
+|created_at|timestamp|||||
+|updated_at|timestamp|||||
 
 
 ## ER図
