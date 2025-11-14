@@ -1,7 +1,19 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     height: 80px;
     padding: 10px 20px;
     background-color: #000000;
+    flex-shrink: 0;
 }
 
 .header-inner{

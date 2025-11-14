@@ -1,0 +1,391 @@
+.main-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.chat-content{
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.chat-side-bar{
+    width: 15%;
+    background-color: #868686;
+}
+
+.chat-side-bar{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.chat-side-bar-deals{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.chat-side-bar-deal-item-wrapper{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.chat-side-bar-deal-item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #eeefeb;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.chat-main-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 85%;
+}
+
+.chat-main-content-product-guide{
+    width: 100%;
+    border-bottom: 2px solid #5f5f5f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-main-content-product-guide-user{
+    display: flex;
+    align-items: center;
+}
+
+.chat-main-content-product-guide-user-image-wrapper{
+    margin-left: 30px;
+    width: 80px;
+    height: 80px;
+}
+
+.chat-main-content-product-guide-user-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chat-main-content-product-guide-user-name{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.chat-main-content-product-guide-button-wrapper{
+    width: 170px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.chat-main-content-product-guide-button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff8282;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.chat-main-content-product-information{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 2px solid #5f5f5f;
+}
+
+.chat-main-content-product-information-image-wrapper{
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+}
+
+.chat-main-content-product-information-image{
+    width: 100%;
+    height: 100%;
+}
+
+.chat-main-content-product-information-detail{
+    margin-left: 30px;
+}
+
+.chat-main-content-product-information-detail-name{
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.chat-main-content-product-information-detail-price{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.chat-main-content-product-information-detail-price-emphasis{
+    font-size: 36px;
+}
+
+.chat-main-content-conversations{
+    width: 100%;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.chat-main-content-conversation-item{
+    max-width: 50%;
+    margin-bottom: 50px;
+}
+
+.is-right{
+    margin-left: auto;
+}
+
+.is-left{
+    margin-right: auto;
+}
+
+.chat-main-content-conversation-item-user{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat-main-content-conversation-item-user-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chat-main-content-conversation-item-user-name{
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.chat-main-content-conversation-item-user-name-left {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.chat-main-content-conversation-item-user-image-wrapper{
+    width: 60px;
+    height: 60px;
+}
+
+.chat-main-content-conversation-item-user-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chat-main-content-conversation-item-message-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-main-content-conversation-item-message{
+    display: inline-block;
+    margin-left: auto;
+    background-color: #d9d9d9;
+    max-width: 100%;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.chat-main-content-conversation-item-image-wrapper{
+    max-width: 50%;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.chat-main-content-conversation-item-image-wrapper-left {
+    max-width: 50%;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.chat-main-content-conversation-item-image{
+    width: 100%;
+}
+
+.chat-main-content-conversation-item-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-main-content-conversation-item-form-update{
+    width: 50px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.chat-main-content-conversation-item-button{
+    font-weight: 400;
+    font-size: 15px;
+    color: #5f5f5f;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-main-content-conversation-item-form-delete{
+    width: 50px;
+    height: 18px;
+}
+
+.chat-main-content-conversations-post{
+    padding-left: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.chat-main-content-conversations-post-form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-main-content-conversations-post-form-input{
+    width: 80%;
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid #5f5f5f;
+    font-size: 20px;
+    font-weight: 700;
+    color: #7b7b7b;
+}
+
+.chat-main-content-conversations-post-form-image-upload{
+    width: 140px;
+    height: 45px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.chat-main-content-conversations-post-form-image-upload-label{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: #ff5555;
+    border: 2px solid #ff5555;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.chat-main-content-conversations-post-form-image-upload-input{
+    display: none;
+}
+
+.chat-main-content-conversations-post-form-button-wrapper{
+    width: 60px;
+    height: 45px;
+}
+
+.chat-main-content-conversations-post-form-button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-main-content-conversatinons-post-form-button-image{
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    width: 600px;
+    height: 370px;
+    border-radius: 15px;
+    border: 1px solid #000000;
+    background-color: #fdfce6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content-title{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 35px;
+    border-bottom: 1px solid #000000;
+}
+
+.modal-content-form{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content-form-sentense{
+    font-weight: 400;
+    font-size: 20px;
+    color: #868686;
+    margin-left: 20px;
+}
+
+.modal-content-form-stars{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #000000;
+}
+
+.star {
+    font-size: 100px;
+    color: #ccc;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+.star.selected,
+.star:hover,
+.star:hover~.star {
+    color: gold;
+}
+
+.modal-content-form-button-wrapper{
+    width: 130px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+
+.modal-content-form-button{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #ff8282;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+}

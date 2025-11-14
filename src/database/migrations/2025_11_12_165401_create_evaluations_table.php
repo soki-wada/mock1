@@ -17,6 +17,7 @@ class CreateEvaluationsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('target_user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('deal_id')->constrained()->cascadeOnDelete();
             $table->tinyInteger('rating');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();

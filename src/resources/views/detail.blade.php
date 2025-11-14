@@ -45,6 +45,14 @@
                 購入手続きへ
             </a>
         </div>
+        <form action="/item/{{$item->id}}/deal" class="product-deal-form" method="post">
+            @csrf
+            <div class="product-deal-button-wrapper">
+                <button class="product-deal-button" type="submit">
+                    出品者との取引開始
+                </button>
+            </div>
+        </form>
         <h4 class="product-section-title">
             商品説明
         </h4>

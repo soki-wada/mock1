@@ -17,11 +17,29 @@ class ProfilesTableSeeder extends Seeder
         //
         $param = [
             'user_id' => '1',
-            'username' => '太郎',
+            'username' => '一郎',
             'address' => '東京都千代田区千代田1-1',
             'building' => '花園町',
             'image' => 'watch.jpg',
             'postal_code' => '100-8111'
+        ];
+        DB::table('profiles')->insert($param);
+        $param = [
+            'user_id' => '2',
+            'username' => '次郎',
+            'address' => '京都府千代田区千代田1-1',
+            'building' => '花町',
+            'image' => 'bag.jpg',
+            'postal_code' => '101-8111'
+        ];
+        DB::table('profiles')->insert($param);
+        $param = [
+            'user_id' => '3',
+            'username' => '三郎',
+            'address' => '大阪府千代田区千代田1-1',
+            'building' => '園町',
+            'image' => 'HDD.jpg',
+            'postal_code' => '100-8110'
         ];
         DB::table('profiles')->insert($param);
     }

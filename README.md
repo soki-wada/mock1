@@ -56,8 +56,6 @@
         php artisan view:clear
         php artisan route:clear
 
-
-
 ## 使用技術
     ・ php 7.4.9-fpm
     ・ Laravel 8.83.29
@@ -67,6 +65,13 @@
     以下はこのプロジェクトのER図です。
 
 ![ER図](https://github.com/soki-wada/mock1/blob/main/mock.png)
+
+## テストユーザー
+| No | 名前        | メールアドレス          | パスワード      |
+|----|-------------|--------------------------|-----------------|
+| 1  | 山田一郎    | yamada@gmail.com     | 12345678     |
+| 2  | 佐藤次郎    | sato@gmail.com       | 87654321     |
+| 3  | 鈴木三郎 | suzuki@gmail.com       | 11111111     |
 
 ## URL
     ・ 開発環境 : http://localhost/

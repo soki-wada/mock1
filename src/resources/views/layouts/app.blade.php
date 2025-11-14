@@ -50,7 +50,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="main-wrapper">
         @yield('content')
     </main>
     @yield('js')

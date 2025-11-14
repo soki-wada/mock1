@@ -30,6 +30,24 @@
     font-weight: 700;
 }
 
+.mypage-profile-user-rating{
+    display: flex;
+}
+
+.mypage-profile-user-rating-star{
+    font-size: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.yellow{
+    color: #fff048;
+}
+
+.gray{
+    color: #d9d9d9;
+}
+
 .mypage-profile-button-wrapper{
     width: 300px;
     height: 60px;
@@ -72,6 +90,18 @@
     margin-right: 50px;
 }
 
+.mypage-section-tab-item-count{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+
 .mypage-products{
     display: flex;
     flex-wrap: wrap;
@@ -98,6 +128,7 @@
 }
 
 .mypage-product-card-wrapper{
+    position: relative;
     width: 20%;
     min-width: 250px;
     height: 20%;
@@ -132,6 +163,21 @@
     font-size: 25px;
     font-weight: 400;
     margin: 0;
+}
+
+.mypage-product-card-count{
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 850px) {

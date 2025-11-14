@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserProfileController;
@@ -32,6 +33,15 @@ Route::get('/email/verify/{id}/{hash}', [UserController::class, 'verify'])->midd
 Route::post('/email/verification-notification', [UserController::class, 'resend'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 Route::post('/item/{item_id}', [ItemController::class, 'comment']);
+Route::post('item/{item_id}/deal', [ChatController::class, 'postDeal']);
+Route::get('item/{item_id}/chat', [ChatController::class, 'showChat']);
+Route::post('/item/{item_id}/chat', [ChatController::class, 'postChat']);
+Route::post('/item/{item_id}/chat/save-draft', [ChatController::class, 'saveDraft']);
+Route::post('/item/{item_id}/chat/update', [ChatController::class, 'updateChat']);
+Route::post('/item/{item_id}/chat/delete', [ChatController::class, 'deleteChat']);
+Route::post('/deal/{item_id}/complete', [ChatController::class, 'completeDeal']);
+Route::post('/item/{item_id}/chat/evaluation', [ChatController::class, 'evaluation']);
+
 Route::post('/favorite/toggle', [ItemController::class, 'toggle'])->name('favorite.toggle');
 
 Route::get('/purchase/success', [PurchaseController::class, 'purchase'])->name('purchase.success');

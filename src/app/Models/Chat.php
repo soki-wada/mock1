@@ -13,7 +13,9 @@ class Chat extends Model
     protected $fillable = [
         'user_id',
         'product_id',
+        'deal_id',
         'message',
+        'image',
         'is_read'
     ];
 
@@ -23,5 +25,10 @@ class Chat extends Model
 
     public function product(){
         return $this->belongsTo(Product::class);
+    }
+
+    public function deal()
+    {
+        return $this->belongsTo(Deal::class);
     }
 }
