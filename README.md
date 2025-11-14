@@ -74,6 +74,14 @@ usersテーブル
 | created_at  | timestamp |        |      | | |
 | updated_at  | timestamp |        |      | | |
 
+conditionsテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+|   id  |  bigint |〇||〇||
+|   content |  varchar(255) |||〇||
+|   created_at  |   timestamp   |||||
+|   updated_at  |   timestamp   |||||
+
 
 
 ## ER図
