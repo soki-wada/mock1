@@ -61,13 +61,28 @@
     ・ Laravel 8.83.29
     ・ MySQL 8.0.26
 
+## テーブル仕様
+usersテーブル
+| カラム名 | 型        | primary key  |   unique key   |  not null |   foreign key    |
+|----|-------------|------------|--------------|--------|---------|
+| id  | bigint    | 〇     |      | 〇 | | 
+| name  | varchar(255)    | |   |〇 | |
+| email  | varchar(255) |   | 〇  |〇 | |
+| email_verified_at  | timestamp |        |      | | |
+| password  | varchar(255) |        |      |〇 | |
+| remember_token  | varchar(100) |        |      | | |
+| created_at  | timestamp |        |      | | |
+| updated_at  | timestamp |        |      | | |
+
+
+
 ## ER図
     以下はこのプロジェクトのER図です。
 
 ![ER図](https://github.com/soki-wada/mock1/blob/main/mock.png)
 
 ## テストユーザー
-| No | 名前        | メールアドレス          | パスワード      |
+| id | name        | email          | password      |
 |----|-------------|--------------------------|-----------------|
 | 1  | 山田一郎    | yamada@gmail.com     | 12345678     |
 | 2  | 佐藤次郎    | sato@gmail.com       | 87654321     |
