@@ -34,9 +34,10 @@ Route::post('/email/verification-notification', [UserController::class, 'resend'
 
 Route::post('/item/{item_id}', [ItemController::class, 'comment']);
 Route::post('item/{item_id}/deal', [ChatController::class, 'postDeal']);
-Route::get('item/{item_id}/chat', [ChatController::class, 'showChat']);
+Route::get('item/{item_id}/chat', [ChatController::class, 'showChat'])->name('item.chat');
 Route::post('/item/{item_id}/chat', [ChatController::class, 'postChat']);
 Route::post('/item/{item_id}/chat/save-draft', [ChatController::class, 'saveDraft']);
+Route::post('/item/{item_id}/chat/edit', [ChatController::class, 'edit']);
 Route::post('/item/{item_id}/chat/update', [ChatController::class, 'updateChat']);
 Route::post('/item/{item_id}/chat/delete', [ChatController::class, 'deleteChat']);
 Route::post('/deal/{item_id}/complete', [ChatController::class, 'completeDeal']);

@@ -80,9 +80,20 @@
                     </div>
                 </div>
                 <div class="chat-main-content-conversation-item-message-wrapper">
+                    @if(isset($editingChat) && $editingChat->id === $chat->id)
+                    <form action="/item/{{$deal->product_id}}/chat/update" method="post">
+                        @csrf
+                        <input type="hidden" name="chat_id" value="{{ $editingChat->id }}">
+                        <input type="text" name="message" value="{{ $editingChat->message }}" class="chat-main-content-conversations-post-form-input">
+                        <button class="chat-main-content-conversation-item-button" type="submit">
+                            更新
+                        </button>
+                    </form>
+                    @else
                     <p class="chat-main-content-conversation-item-message">
                         {{$chat->message}}
                     </p>
+                    @endif
                 </div>
                 @if(!empty($chat->image))
                 <div class="chat-main-content-conversation-item-image-wrapper">
@@ -90,8 +101,9 @@
                 </div>
                 @endif
                 <div class="chat-main-content-conversation-item-buttons">
-                    <form action="/item/{{$deal->product_id}}/chat/update" class="chat-main-content-conversation-item-form-update" method="post">
+                    <form action="/item/{{$deal->product_id}}/chat/edit" class="chat-main-content-conversation-item-form-update" method="post">
                         @csrf
+                        <input type="hidden" name="chat_id" value="{{$chat->id}}">
                         <button class="chat-main-content-conversation-item-button" type="submit">
                             編集
                         </button>

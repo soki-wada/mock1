@@ -83,14 +83,50 @@ class ChatController extends Controller
         }
 
         Chat::create($chat);
+        $request->session()->forget("chat_draft_{$item_id}");
 
         return redirect("item/$item_id/chat");
     }
 
-    public function updateChat(Request $request, $item_id){
+    public function edit(Request $request, $item_id)
+    {
+        $editingChat = Chat::find($request->chat_id);
 
+        $user = Auth::user();
+        $chats = Chat::where('product_id', $item_id)->where('user_id', '!=', $user->id)->where('is_read', false)->get();
 
-        return redirect("item/$item_id/chat");
+        $deals = Deal::where(function ($query) use ($user) {
+            $query->where('selling_user_id', $user->id)
+                ->orWhere('purchasing_user_id', $user->id);
+        })
+            ->where('product_id', '!=', $item_id)
+            ->where('is_deal', false)
+            ->with(['product', 'chats' => function ($q) {
+                $q->latest();
+            }])
+            ->get()
+            ->sortByDesc(function ($deal) {
+                $latestChat = $deal->chats->first();
+                return $latestChat ? $latestChat->created_at : now()->subYears(100);
+            });
+        $deal = Deal::where('product_id', $item_id)->first();
+        $messageDraft = session("chat_draft_{$item_id}", '');
+
+        $is_deal = Deal::where('product_id', $item_id)->with('evaluations')->first();
+        $hasEvaluated = $is_deal->evaluations()->where('user_id', $user->id)->first();
+
+        return view('chat', compact('deals', 'user', 'deal', 'messageDraft', 'is_deal', 'hasEvaluated', 'editingChat'));
+    }
+
+    public function updateChat(Request $request, $item_id)
+    {
+        $chat = Chat::find($request->chat_id)->update([
+            'message' => $request->message
+        ]);
+
+        $request->session()->forget("chat_draft_{$item_id}");
+
+        return redirect("/item/{$item_id}/chat");
     }
 
     public function deleteChat(Request $request, $item_id){

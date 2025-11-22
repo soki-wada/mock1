@@ -14,9 +14,9 @@
     background-color: #868686;
 }
 
-.chat-side-bar{
+.chat-side-bar-title{
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     color: #ffffff;
 }
@@ -33,6 +33,7 @@
 }
 
 .chat-side-bar-deal-item{
+    text-align: center;
     display: block;
     width: 100%;
     height: 100%;
@@ -388,4 +389,38 @@
     font-weight: 400;
     font-size: 24px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .chat-side-bar {
+        width: 25%;
+    }
+
+    .chat-side-bar-title {
+        font-size: 26px;
+    }
+
+    .chat-side-bar-deal-item {
+        font-size: 18px;
+    }
+
+    .chat-main-content-product-guide-user-image-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+
+    .chat-main-content-product-guide-user-name {
+        font-size: 26px;
+    }
+
+    .chat-main-content-product-guide-button-wrapper {
+        width: 150px;
+        height: 40px;
+        margin-right: 20px;
+    }
+
+    .chat-main-content-product-guide-button {
+        font-size: 18px;
+    }
 }

@@ -16,6 +16,7 @@
             <a href="/" class="header-logo-wrapper">
                 <img src="{{asset('images/logo.png')}}" alt="" class="header-logo">
             </a>
+            @if(!request()->routeIs('item.chat'))
             <div class="header-search-form-wrapper">
                 <form action="/search" class="header-search-form" method="get">
                     <input type="text" class="header-search-form-input" placeholder="なにをお探しですか？" name="keyword" value="{{old('keyword', $keyword ?? '')}}">
@@ -48,6 +49,7 @@
                     </a>
                 </div>
             </div>
+            @endif
         </div>
     </header>
     <main class="main-wrapper">
